@@ -8,9 +8,10 @@ function App() {
 
   const handleSubmit = (e) => {
     const today = new Date();
+    console.log(birthdate);
     const birth = new Date(birthdate);
     const UNIXDifference = today.getTime() - birth.getTime();
-    const years = UNIXDifference / (1000 * 60 * 60 * 24 * 365.25);
+    const years = (UNIXDifference / (1000 * 60 * 60 * 24 * 365.25)) / 0.109375;
     setPeanutAge(years.toFixed(2));
   };
 
