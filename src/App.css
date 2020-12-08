@@ -1,13 +1,17 @@
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   width: 300px;
+  height: fit-content;
   margin: 0 auto;
   text-align: center;
   font-family: sans-serif;

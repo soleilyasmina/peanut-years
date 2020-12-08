@@ -11,12 +11,13 @@ function App() {
     console.log(birthdate);
     const birth = new Date(birthdate);
     const UNIXDifference = today.getTime() - birth.getTime();
-    const years = (UNIXDifference / (1000 * 60 * 60 * 24 * 365.25)) / 0.109375;
-    setPeanutAge(years.toFixed(2));
+    const years = (UNIXDifference / (1000 * 60 * 60 * 24 * 365.25));
+    const peanutYears = years * 0.109375 * 365.25;
+    setPeanutAge(peanutYears.toFixed(2));
   };
 
   return (
-    <>
+    <div className="container">
       <div className="App">
         <img src={tweet} alt="tweet"/>
         <h4>How old are you in Peanut Years?</h4>
@@ -29,7 +30,7 @@ function App() {
           @soleilyasmina
         </a>
       </footer>
-    </>
+    </div>
   );
 }
 
